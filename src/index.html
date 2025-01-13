@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/output.css">
+  <title>Cardapio | ADAMS BURGUER</title>
+</head>
+<body class="font-sans text-white bg-zinc-900 relative">
+  <nav class="bg-black lg:bg-red-500 p-5 flex items-center justify-center z-40 w-full fixed bottom-0 left-0 lg:top-0 lg:left-0 lg:max-w-fit lg:h-[100vh]">
+    <div class="*:size-10 flex justify-center items-center gap-4 my-auto *:cursor-pointers lg:flex-col">
+      <a href="#hamburguer"><img src="assets/hamburguer.png" alt="imagem-hamburgue"></a>
+      <a href="#pizza"><img src="assets/pizza.png" alt="imagem-pizza"></a>
+      <a href="#bebidas"><img src="assets/refrigerante.png" alt="imagem-lata-refrigerante"></a>
+      <a href="#sorvetes"><img src="assets/sorvete .png" alt="imagem-sorvete"></a>
+    </div>
+  </nav>
+  <main class="w-full ">
+    <header class="max-w-7xl mx-auto flex items-center justify-between py-5 px-5">
+      <a href="#hamburguer">
+        <img src="assets/logo.png" alt="Hamburgue-logo" class="size-20 cursor-pointer">
+      </a>
+      <button class="relative cursor-pointer" id="cart-btn">
+        <img src="assets/cart.png" alt="Carrinho de compras" class="size-8">
+        <span class="absolute -top-4 -right-3 bg-red-600 text-white text-xs md:text-sm font-bold rounded-full px-2 py-0.5" id="cart-count">0</span>
+      </button>      
+    </header>
+    <!-- menu -->
+    <div id="menu" class="px-5">
+      <section class="hambuguers" id="hamburguer">
+        <div class="flex items-center gap-2 max-w-7xl my-2 mx-auto">
+          <span class="block h-1 w-7 bg-white"></span>
+          <h2 class="text-2xl font-bold md:text-3xl mt-2 md:mt-6 mb-4">Hamburguers</h2>
+        </div>
+        <div class="grid grid-cols-1 max-w-7xl gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-10 mb-10 mx-auto">
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/hamb-1.png" alt="" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Hamburgue Smash</p>
+              <p class="text-[10px] max-w-[250px]">Pao levinho de fermentacao natural de trigo, burger 160g, queijo prato e e maionese da casa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 18.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Hamburgue Smash" data-price="18.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/hamb-2.png" alt="" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Hamburgue Duplo</p>
+              <p class="text-[10px] max-w-[250px]">Pao levinho de fermentacao natural de trigo, burger 160g, queijo prato e e maionese da casa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 32.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Hamburgue Duplo" data-price="32.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/hamb-3.png" alt="" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Hamburgue Cheddar</p>
+              <p class="text-[10px] max-w-[250px]">Pao levinho de fermentacao natural de trigo, burger 160g, queijo prato e e maionese da casa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 35.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Hamburgue Cheddar" data-price="35.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/hamb-4.png" alt="" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Hamburgue Enpanado</p>
+              <p class="text-[10px] max-w-[250px]">Pao levinho de fermentacao natural de trigo, burger 160g, queijo prato e e maionese da casa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 26.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Hamburgue Enpanado" data-price="26.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/hamb-5.png" alt="" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Hamburgue Tradicional</p>
+              <p class="text-[10px] max-w-[250px]">Pao levinho de fermentacao natural de trigo, burger 160g, queijo prato e e maionese da casa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 22.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Hamburgue Tradicional" data-price="22.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/hamb-6.png" alt="" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Hamburgue da casa</p>
+              <p class="text-[10px] max-w-[250px]">Pao levinho de fermentacao natural de trigo, burger 160g, queijo prato e e maionese da casa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 17.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Hamburgue da casa" data-price="17.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/hamb-7.png" alt="" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Hamburgue Acebolado</p>
+              <p class="text-[10px] max-w-[250px]">Pao levinho de fermentacao natural de trigo, burger 160g, queijo prato e e maionese da casa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 24.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Hamburgue Acebolado" data-price="24.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/hamb-8.png" alt="" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Hamburgue Salad</p>
+              <p class="text-[10px] max-w-[250px]">Pao levinho de fermentacao natural de trigo, burger 160g, queijo prato e e maionese da casa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 20.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Hamburgue Salad" data-price="20.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pizzas" id="pizza">
+        <div class="flex items-center gap-2 max-w-7xl my-2 mx-auto">
+          <span class="block h-1 w-7 bg-white"></span>
+          <h2 class="text-2xl font-bold md:text-3xl mt-2 md:mt-6 mb-4">Pizzas</h2>
+        </div>
+        <div class="grid grid-cols-1 max-w-7xl gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-10 mb-10 mx-auto">
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/pizza-1.png" alt="pizza-quatro-queijos" class="w-28 h-full rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Pizza Quatro Queijos</p>
+              <p class="text-[10px] max-w-[250px]">Uma explosão de sabores com mussarela, parmesão, provolone e gorgonzola.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 52.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Quatro Queijos" data-price="52.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/pizza-2.png" alt="pizza-calabresa" class="w-28 h-full rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Pizza Calabresa</p>
+              <p class="text-[10px] max-w-[250px]">Tradicional, com calabresa fatiada, cebola e orégano.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 18.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Calabresa" data-price="47.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/pizza-3.png" alt="pizza-frango-catupiry" class="w-28 h-full rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Pizza Frango com Catupiry</p>
+              <p class="text-[10px] max-w-[250px]">Frango desfiado e a cremosidade do catupiry, tomate e salsa</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 49.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Pizza Frango com Catupiry" data-price="49.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/pizza-4.png" alt="pizza-Margherita" class="w-28 h-full rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Pizza Margherita</p>
+              <p class="text-[10px] max-w-[250px]">Um clássico italiano com mussarela, tomate fresco e manjericão.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 45.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Margherita" data-price="45.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/pizza-7.png" alt="pizza-Portuguesa" class="w-28 h-full rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Pizza Portuguesa</p>
+              <p class="text-[10px] max-w-[250px]">Uma mistura deliciosa de presunto, ovos, cebola, azeitonas e pimentão.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 50.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Portuguesa" data-price="50.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/pizza-8.png" alt="pizza-morango-nutella" class="w-28 h-full rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Pizza Morango com nutella</p>
+              <p class="text-[10px] max-w-[250px]">Uma sobremesa irresistível, com morangos frequinhos com nutella.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 42.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Morango com nutella" data-price="42.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/pizza-5.png" alt="pizza-uva-verde-nutella" class="h-full w-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Pizza Uva Verde com nutella</p>
+              <p class="text-[10px] max-w-[250px]"> Uma sobremesa irresistível, com uvas frequinhas com nutella.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 42.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Uva Verde com nutella" data-price="42.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/pizza-6.png" alt="pizza-banana-nutella" class="w-28 h-full rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Pizza Banana com nutella</p>
+              <p class="text-[10px] max-w-[250px]">Uma sobremesa irresistível, com bananas frequinhas com nutella.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 42.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Banana com nutella" data-price="42.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </section>
+
+      <section class="bebidas" id="bebidas">
+        <div class="flex items-center gap-2 max-w-7xl my-2 mx-auto">
+          <span class="block h-1 w-7 bg-white"></span>
+          <h2 class="text-2xl font-bold md:text-3xl mt-2 md:mt-6 mb-4">Bebidas</h2>
+        </div>
+        <div class="grid grid-cols-1 max-w-7xl gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-10 mb-10 mx-auto">
+          <div class="flex gap-2 w-full  bg-black p-2 rounded-md max-w-[386px]">
+            <img src="assets/refri-1.png" alt="lata-coca" class="w-28 h-28 rounded-md hover:scale-110 duration-300 bg-zinc-200">
+            <div class="w-full">
+              <p class="font-bold">Coca lata</p>
+              <div class="flex items-center justify-between mt-3">
+                <p class="font-bold">R$ 6</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Coca lata" data-price="6">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full  bg-black p-2 rounded-md max-w-[386px]">
+            <img src="assets/refri-2.png" alt="lata-guarana" class="w-28 h-28 rounded-md hover:scale-110 duration-300 bg-zinc-200">
+            <div class="w-full">
+              <p class="font-bold">Guarana lata</p>
+              <div class="flex items-center justify-between mt-3">
+                <p class="font-bold">R$ 6</p>
+                <button class="add-to-card-btn  bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Guarana lata" data-price="6">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full  bg-black p-2 rounded-md max-w-[386px]">
+            <img src="assets/refri-3.png" alt="lata-fanta-laranja" class="w-28 h-28 rounded-md hover:scale-110 duration-300 bg-zinc-200">
+            <div class="w-full">
+              <p class="font-bold">Fanta Laranja</p>
+              <div class="flex items-center justify-between mt-3">
+                <p class="font-bold">R$ 6</p>
+                <button class="add-to-card-btn  bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Fanta Laranja" data-price="6">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full  bg-black p-2 rounded-md max-w-[386px]">
+            <img src="assets/refri-4.png" alt="lata-fanta-uva" class="w-28 h-28 rounded-md hover:scale-110 duration-300 bg-zinc-200">
+            <div class="w-full">
+              <p class="font-bold">Fanta Uva</p>
+              <div class="flex items-center justify-between mt-3">
+                <p class="font-bold">R$ 6</p>
+                <button class="add-to-card-btn  bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Fanta Uva" data-price="6">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full  bg-black p-2 rounded-md max-w-[386px]">
+            <img src="assets/refri-5.png" alt="lata-pepsi" class="w-28 h-28 rounded-md hover:scale-110 duration-300 bg-zinc-200">
+            <div class="w-full">
+              <p class="font-bold">Pepsi</p>
+              <div class="flex items-center justify-between mt-3">
+                <p class="font-bold">R$ 6</p>
+                <button class="add-to-card-btn  bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Pepsi" data-price="6">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full  bg-black p-2 rounded-md max-w-[386px]">
+            <img src="assets/refri-6.png" alt="lata-fanta-guarana" class="w-28 h-28 rounded-md hover:scale-110 duration-300 bg-zinc-200">
+            <div class="w-full">
+              <p class="font-bold">Fanta Guarana</p>
+              <div class="flex items-center justify-between mt-3">
+                <p class="font-bold">R$ 6</p>
+                <button class="add-to-card-btn  bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Fanta Guarana" data-price="6">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sorvetes" id="sorvetes">
+        <div class="flex items-center gap-2 max-w-7xl my-2 mx-auto">
+          <span class="block h-1 w-7 bg-white"></span>
+          <h2 class="text-2xl font-bold md:text-3xl mt-2 md:mt-6 mb-4">Milkshakes</h2>
+        </div>
+        <div class="grid grid-cols-1 max-w-7xl gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-10 mb-10 mx-auto">
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/sorvete-1.png" alt="Milkshakes Chocolate" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Milkshakes Chocolate</p>
+              <p class="text-[12px] max-w-[250px]">Rico e indulgente, traz o sabor intenso do chocolate em uma textura cremosa que conquista a cada gole.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 15.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Milkshakes Chocolate" data-price="15.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/sorvete-2.png" alt="Milkshakes Morango" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Milkshakes Morango</p>
+              <p class="text-[12px] max-w-[250px]">Refrescante e frutado, combina o doce natural dos morangos com uma cremosidade irresistível.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 15.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Milkshakes Morango" data-price="15.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 bg-black p-2 rounded-md max-w-fit">
+            <img src="assets/sorvete-3.png" alt="Milkshakes Amendoin" class="w-28 h-28 rounded-md hover:scale-110 duration-300">
+            <div>
+              <p class="font-bold">Milkshakes Amendoin</p>
+              <p class="text-[12px] max-w-[250px]">Cremoso e com o sabor autêntico do amendoim, é perfeito para quem ama a mistura de doce e salgado na medida certa.</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 15.90</p>
+                <button class="add-to-card-btn bg-red-600 flex items-center justify-center p-2 rounded-full" data-name="Milkshakes Amendoin" data-price="15.90">
+                  <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="w-full">
+        <div class="flex items-center gap-2 max-w-7xl my-2 mx-auto">
+          <span class="block h-1 w-7 bg-white"></span>
+          <h2 class="text-2xl font-bold md:text-3xl mt-6 mb-4">Contato</h2>
+        </div>
+        <div class="max-w-7xl gap-7 md:gap-10 mb-10 mx-auto">
+          <div class="flex items-center gap-4">
+            <img src="assets/logo.png" alt="imagem-logo" class="size-32">
+            <ul class="*:size-12 cursor-pointer flex gap-3">
+              <li><img src="assets/whatsapp (2).png" alt="logo-whatsapp" class="hover:scale-110"></li>
+              <li><img src="assets/facebook (4).png" alt="logo-facebook" class="hover:scale-110"></li>
+              <li><img src="assets/instagram (2).png" alt="logo-instagran" class="hover:scale-110"></li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-4 mt-5">
+            <img src="assets/mapa.png" alt="imagem-localizacao" class="size-10">
+            <div class="*:text-[12px] md:*:text-lg *:font-bold">
+              <p>Rua Sabor Real, nº 123, Bairro Grelhados, Cidade do Paladar, CEP: 45678-900</p>
+              <p>Telefone: (11) 98765-4321, Horário: Todos os dias, das 11h às 23h.</p>
+            </div>
+          </div>
+        </div>
+        <p class="bg-black text-center py-4 text-zinc-600 w-full">Copyright @2025; Todos os direitos resevados Designed by JVICTOR</p>
+      </footer>
+    </div>
+  </main>
+  <!-- modal -->
+  <div class="h-full w-full bg-black/50 text-black backdrop-blur-md fixed top-0 z-[99] items-center justify-center hidden" id="cart-modal">
+    <div class=" text-center bg-white p-5 rounded-md min-w-[90%] md:min-w-[500px]">
+      <h2 class="font-bold mb-5 text-1xl">Meu carrinho</h2>
+      <div id="cart-items" class="flex justify-between items-center mb-2 flex-col">Carrinho Vazio!</div>
+      <p class="font-bold text-left">Total: <span id="cart-total">0.00</span></p>
+      <p class="font-bold mt-4 text-left">Endereco da entrega:</p>
+      <input type="text" placeholder="Digite o seu endereco completo" class="w-full border-2 border-zinc-400 p-2 my-1 rounded-md" id="address" >
+      <p class="text-red-500 text-left text-sm hidden" id="address-warn">Digite o seu endereco completo</p>
+      <div class="flex items-center justify-between mt-5 w-full">
+        <button id="close-modal-btn" class="bg-red-600 py-2 px-5 rounded-md text-white">Fechar</button>
+        <button id="checkount-btn" class="bg-green-500 py-2  px-5 rounded-md  text-white">Finalizar pedido</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
