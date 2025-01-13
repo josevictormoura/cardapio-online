@@ -12,10 +12,12 @@ let cart = []
 
 function showModalCart() {
   modalCart.style.display = 'flex'
+  document.querySelector('html').classList.add('overflow-y-hidden')
 }
 
 function closeModalCart() {
   modalCart.style.display = ''
+  document.querySelector('html').classList.remove('overflow-y-hidden')
 }
 
 function handleMenu({target}) {
@@ -47,6 +49,14 @@ function addToCard(name, price) {
 }
 
 function updateCardModal() {
+
+  if (cart.length === 0) {
+    containerItemsCarrinho.innerHTML = "Carrinho Vazio"
+    countCart.innerHTML = 0
+    priceTotal.textContent = "0,00"
+    return
+  }
+
   containerItemsCarrinho.innerHTML = ""
   let total = 0
 
@@ -70,11 +80,6 @@ function updateCardModal() {
 
   priceTotal.textContent = total.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
   countCart.innerHTML = cart.length
-
-  if (containerItemsCarrinho.innerHTML === "") {
-    containerItemsCarrinho.innerHTML = 'Carrinho Vazio!'
-  }
-
 }
 
 function removeItemCart({target}) {
@@ -124,7 +129,20 @@ btnFinalizarPedido.addEventListener('click', () => {
     spanErroInput.style.display = 'block'
     inputAddress.classList.remove('border-zinc-400')
     inputAddress.classList.add('border-red-500')
+    return
   }
+
+  const cartItems = cart.map(pedido => {
+    return (
+      `${pedido.name} Quantidade: (${pedido.quantity}) Preco: R$${pedido.preco} |`
+    )
+  }).join("")
+
+  const message = encodeURIComponent(cartItems)
+  const phone = "63992795576"
+  window.open(`https://wa.me/${phone}?text=${message} Endereco: ${inputAddress.value}`, "_blank")
+  // Recarregar a página
+  location.reload();
 })
 
 function ckeckRestauranteOpen() {
