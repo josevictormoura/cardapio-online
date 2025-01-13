@@ -101,6 +101,25 @@ function removeCard(name) {
   }
 }
 
+inputAddress.addEventListener('input', ({target}) => {
+  let inputValue = target.value
+  if (inputValue.length > 0) {
+    spanErroInput.style.display = ''
+    inputAddress.classList.add('border-zinc-400')
+    inputAddress.classList.remove('border-red-500')
+  }
+})
+
+btnFinalizarPedido.addEventListener('click', () => {
+  if(cart.length === 0)return
+
+  if (inputAddress.value === "") {
+    spanErroInput.style.display = 'block'
+    inputAddress.classList.remove('border-zinc-400')
+    inputAddress.classList.add('border-red-500')
+  }
+})
+
 containerItemsCarrinho.addEventListener('click', removeItemCart)
 menu.addEventListener('click', handleMenu)
 modalCart.addEventListener('click', event => {
