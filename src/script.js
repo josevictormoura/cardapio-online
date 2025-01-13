@@ -111,6 +111,13 @@ inputAddress.addEventListener('input', ({target}) => {
 })
 
 btnFinalizarPedido.addEventListener('click', () => {
+  const isOpen = ckeckRestauranteOpen()
+
+    if (!isOpen) {
+      alert("Ops, a Hamburgueria esta fechada!")
+      return
+    }
+
   if(cart.length === 0)return
 
   if (inputAddress.value === "") {
@@ -119,6 +126,12 @@ btnFinalizarPedido.addEventListener('click', () => {
     inputAddress.classList.add('border-red-500')
   }
 })
+
+function ckeckRestauranteOpen() {
+  const data = new Date()
+  const hora = data.getHours()
+  return hora >= 18 && hora < 23
+}
 
 containerItemsCarrinho.addEventListener('click', removeItemCart)
 menu.addEventListener('click', handleMenu)
